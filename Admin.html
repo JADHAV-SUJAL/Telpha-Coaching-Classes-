@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            background-color: #87CEEB; /* Light sky blue background color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .analytics, .table {
+            width: 48%;
+            padding: 20px;
+            background-color: #f0f0f0; /* Light gray background color */
+            border-radius: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <div class="dashboard">
+            <div class="analytics">
+                <h2>Website Analytics</h2>
+                <canvas id="analyticsChart" width="400" height="300"></canvas>
+                <div id="analyticsNumbers"></div>
+            </div>
+            <div class="table">
+                <h2>Course Enrollment & Revenue</h2>
+                <table id="enrollmentTable">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Enrolled Students</th>
+                            <th>Sold Courses</th>
+                            <th>Revenue Generated</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Loading...</td>
+                            <td>Loading...</td>
+                            <td>Loading...</td>
+                            <td>Loading...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const coursesData = [
+                { course: "Mathematics", enrolledStudents: 50, soldCourses: 25, revenueGenerated: 5000 },
+                { course: "Physics", enrolledStudents: 40, soldCourses: 20, revenueGenerated: 4000 },
+                // Add more course data as needed
+            ];
+
+            const websiteAnalyticsData = {
+                totalUsers: 1000,
+                totalCourses: 50,
+                totalRevenue: 10000
+                // Add more analytics data as needed
+            };
+
+            const enrollmentTableBody = document.querySelector("#enrollmentTable tbody");
+            const analyticsChart = document.getElementById('analyticsChart').getContext('2d');
+            const analyticsNumbers = document.getElementById('analyticsNumbers');
+
+            // Render course enrollment and revenue table
+            coursesData.forEach(course => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${course.course}</td>
+                    <td>${course.enrolledStudents}</td>
+                    <td>${course.soldCourses}</td>
+                    <td>${course.revenueGenerated}</td>
+                `;
+                enrollmentTableBody.appendChild(row);
+            });
+
+            // Render website analytics chart
+            const analyticsChartConfig = {
+                type: 'bar', // Change chart type to bar
+                data: {
+                    labels: ['Total Users', 'Total Courses', 'Total Revenue'],
+                    datasets: [{
+                        label: 'Value',
+                        data: [websiteAnalyticsData.totalUsers, websiteAnalyticsData.totalCourses, websiteAnalyticsData.totalRevenue],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.5)',
+                            'rgba(54, 162, 235, 0.5)',
+                            'rgba(255, 206, 86, 0.5)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            };
+
+            new Chart(analyticsChart, analyticsChartConfig);
+
+            // Render website analytics numbers
+            analyticsNumbers.innerHTML = `
+                <p>Total Users: ${websiteAnalyticsData.totalUsers}</p>
+                <p>Total Courses: ${websiteAnalyticsData.totalCourses}</p>
+                <p>Total Revenue: ${websiteAnalyticsData.totalRevenue}</p>
+            `;
+        });
+    </script>
+    
+</body>
+</html>

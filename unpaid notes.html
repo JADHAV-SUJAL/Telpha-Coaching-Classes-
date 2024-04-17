@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Document</title>
+</head>
+<style>
+  .animate-charcter
+  {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+  -225deg,
+  #231557 0%,
+  #44107a 29%,
+  #ff1361 67%,
+  #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 35px;
+  }
+  
+  @keyframes textclip {
+  to {
+  background-position: 200% center;
+  }
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  body{
+
+    background-color:  #8ed9ea;
+  }
+
+  #sidebar {
+    position: fixed;
+    width: 25%;
+    height: 300px;
+    background-color: #333;
+    color: #fff;
+    box-sizing: border-box;
+    margin: 20px;
+    display: inline-block;
+  }
+
+  #sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #sidebar li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  #sidebar li:hover {
+    background-color: #555;
+  }
+
+  .container {
+    display: inline-block;
+    height: 1343px;
+    width: 1066px;
+    border: 2px solid rgb(199, 196, 196);
+    position: relative;
+    left: 430px;
+    top: 20px;
+    padding: 20px 0;
+    border-radius: 10px;
+  }
+
+  .container {
+    background-color: #8e8c8c;
+  }
+
+  .one {
+    height: 200px;
+    width: 1000px;
+    border: 2px solid rgb(14, 14, 14);
+    margin: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+  }
+
+  .container .one .img {
+    display: inline-block;
+    height: 199px;
+    width: 260px;
+    /* border: 2px solid red; */
+  }
+
+  .container .one .img img {
+    height: 199px;
+    width: 260px;
+  }
+
+  .container .one .hedSub {
+    display: inline-block;
+    height: 199px;
+    width: 729px;
+    /* border: 2px solid red; */
+    position: relative;
+    bottom: 57px;
+    border-radius: 20px;
+  }
+
+  .container .one .hedSub h1 {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .container .one .hedSub h3 {
+    text-align: center;
+  }
+
+  .container .one .hedSub #download-btn {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    bottom: -36px;
+    left: 610px;
+  }
+  .footer {
+    background-color: #0d0c0c;
+    color: rgb(245, 236, 236);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    color: #ccc;
+}
+
+.footer-section {
+    background-color: black;
+    flex: 1;
+    color: white;
+}
+
+.footer-section h3 {
+    color: #eaeff3;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.footer-section:hover h3 {
+    border-bottom: 2px solid #e74c3c;
+}
+
+.section-content {
+    margin-top: 10px;
+
+}
+
+.social-icons img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.copyright p a {
+  background-color: black;
+  margin-bottom: 50px;
+  color: white;
+}
+.footer-container .footer-section .section-content img {
+    height: 50px;
+    width: 140px;
+}
+
+.footer-container .footer-section .section-content .social-icons img {
+    height: 30px;
+    width: 20px;
+}
+
+
+.live-indicator {
+    display: inline-block;
+    background-color: #e74c3c;
+    /* Live indicator color */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: white;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+
+nav img {
+    max-width: 180px;
+    height: 80px;
+    display: inline-block;
+    align-items: left;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+ul li a:hover {
+    background-color: skyblue;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: skyblue;
+    color: white;
+}
+</style>
+
+<body>
+  <nav>
+    <nav>
+      <ul>
+        <div class="navbar" id="myNavbar">
+          <img src="Telphatech.png" alt="TelphaTech Logo" />
+          <li class="dropdown">
+            <i class="fas fa-home icon"></i><a href="homepage.html">Home </a>
+          </li>
+          <li class="dropdown">
+            <i class="fas fa-graduation-cap icon"></i><a>Class Mode </a>
+            <div class="dropdown-content">
+              <a href="Offline_class.html">Offline Class</a>
+              <a href="online class.html">Online Class</a>
+            </div>
+          </li>
+          </li>
+          <li>
+          <li class="dropdown">
+            <i class="fas fa-video"></i><a>Webinar</a>
+            <div class="dropdown-content">
+              <ul>
+                <a href="live webinar.html">Live Webinar</a>
+                <a href="upcoming webinar.html">Upcoming Webinar</a>
+              </ul>
+            </div>
+          </li>
+          </li>
+          <li>
+          <li class="dropdown"><i class="fas fa-regular fa-user"></i><a href="student corner.html">Student Corner</a>
+            <div class="dropdown-content">
+            </div>
+          </li>
+          </li>
+          <li class="dropdown">
+            <i class="fas fa-solid fa-caret-down"></i><a>More</a>
+            <div class="dropdown-content">
+              <ul>
+                <a href="events.html">Events</a>
+                <a href="aboutpage.html">About Us</a>
+                <a href="registration.html">New Registration</a>
+                <a href="Placementcontaint.html">Placement Section</a>
+              </ul>
+            </div>
+          </li>
+          <li><i class="fas fa-solid fa-users"></i><a href="Login.html">Log In</a>  </li>
+          <li><i class="fas fa-solid fa-user-plus"></i><a href="registration.html">New Registration</a>
+          </li>
+          </li>
+    </nav>
+  </nav>
+  <marquee>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2 class="animate-charcter">Unpaid Notes<h2>
+        </div>
+    </div>
+</marquee>
+  <!-- <nav>
+    <ul>
+    <div class="navbar" id="myNavbar">
+        <li class="dropdown">
+         <a href="student corner.html">Back</a>
+         <a href="Paid_page.html">Paid Notes</a>
+        </li>
+    </div>
+</ul>
+</nav> -->
+  
+  <div class="section">
+    <div id="sidebar">
+      <ul>
+        <li>C</li><br>
+        <li>C++</li><br>
+        <li>Java</li><br>
+        <li>HTML</li><br>
+        <li>CSS</li><br>
+        <li>JavaScript</li><br>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="one">
+        <div class="img">
+          <img src="download (1).png" alt="" />
+        </div>
+
+        <div class="hedSub">
+          <h1>C Language</h1>
+          <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <button id="download-btn">Download PDF</button>
+        </div>
+
+      </div>
+
+
+      <div class="one">
+        <div class="img">
+          <img src="C++.png" alt="" />
+        </div>
+
+        <div class="hedSub">
+          <h1>C++ Language</h1>
+          <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <button id="download-btn">Download PDF</button>
+        </div>
+
+      </div>
+
+      <div class="one">
+        <div class="img">
+          <img src="JAVA.png" alt="" />
+        </div>
+
+        <div class="hedSub">
+          <h1>Java</h1>
+          <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <button id="download-btn">Download PDF</button>
+        </div>
+
+      </div>
+
+      <div class="one">
+        <div class="img">
+          <img src="HTML.png" alt="" />
+        </div>
+
+        <div class="hedSub">
+          <h1>HTML</h1>
+          <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <button id="download-btn">Download PDF</button>
+        </div>
+
+      </div>
+
+
+      <div class="one">
+        <div class="img">
+          <img src="CSS.png" alt="" />
+        </div>
+
+        <div class="hedSub">
+          <h1>CSS</h1>
+          <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <button id="download-btn">Download PDF</button>
+        </div>
+
+      </div>
+
+      <div class="one">
+        <div class="img">
+          <img src="JS.png" alt="" />
+        </div>
+
+        <div class="hedSub">
+          <h1>JavaScript</h1>
+          <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing.</h3>
+          <button id="download-btn">Download PDF</button>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+  <br><br><br>
+  <center>
+    <div style="background-color: #0d0c0c;">
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <div class="section-content">
+              <label class="logo"><img src="Telphatech.png" width="200px" height="80px"></label>
+              <div class="social-icons">
+                <a href="#">
+                  <font color="white"><i class="fab fa-facebook-f"></i></font>
+                </a>
+                <a href="#">
+                  <font color="white"><i class="fab fa-twitter"></i></font>
+                </a>
+                <a href="#">
+                  <font color="white"><i class="fab fa-instagram"></i></font>
+                </a>
+                <a href="#">
+                  <font color="white"><i class="fab fa-linkedin-in"></i></font>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>What We Do</h3>
+            <div class="section-content">
+              <p>AI/ML Development</p>
+              <p>Blockchain Development</p>
+              <p>Android Development</p>
+              <p>Flutter Development</p>
+              <p>Digital Marketing</p>
+              <p>WordPress Development</p>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>What We Offer</h3>
+            <div class="section-content">
+              <p>MEAN Full Stack Development</p>
+              <p>Django Development</p>
+              <p>Java Development</p>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p> <a href="#">
+                <font color="white"><i class="fas fa-sharp fa-regular fa-phone"></i> +918421835869</font>
+              </a> </p>
+            <p><a href="#">
+                <font color="white"><i class="fas fa-regular fa-envelope"></i> telphatech@gmail.com</font>
+              </a></p>
+            <p><a href="#">
+                <font color="white"><i class="fas fa-map-marker-alt"></i>Gaurav, Pune</font>
+              </a></p>
+          </div>
+        </div>
+
+    <div class="copyright">
+      <p>
+        <font color="white">&copy; 2024 Your Company. All rights reserved. |</font>
+        <a href="">Telphatech.com</a>
+    </div>
+    </p>
+
+</footer>
+</div>
+</center>
+</body>
+
+</html>

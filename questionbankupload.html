@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Bank Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        label {
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        #file-list {
+            margin-top: 20px;
+        }
+
+        .pdf-link {
+            display: block;
+            margin-bottom: 10px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unpaid Question Bank Viewer</h1>
+
+    <input type="file" id="file-input" accept=".pdf" multiple onchange="uploadPDFs()" />
+    <label for="file-input">Upload PDFs</label>
+
+    <div id="file-list"></div>
+
+    <script>
+        function uploadPDFs() {
+            const fileInput = document.getElementById('file-input');
+            const fileListDiv = document.getElementById('file-list');
+
+            const files = fileInput.files;
+
+            if (files.length > 0) {
+                for (const file of files) {
+                    // Send each file to the server for uploading
+                    // (This part should be handled by server-side code)
+
+                    // For now, just display the uploaded file in the list
+                    const pdfLink = document.createElement('a');
+                    pdfLink.href = URL.createObjectURL(file);
+                    pdfLink.target = '_blank';
+                    pdfLink.className = 'pdf-link';
+                    pdfLink.textContent = file.name;
+
+                    fileListDiv.appendChild(pdfLink);
+                }
+
+                // Clear the file input after uploading
+                fileInput.value = null;
+            }
+        }
+    </script>
+</body>
+</html>
+

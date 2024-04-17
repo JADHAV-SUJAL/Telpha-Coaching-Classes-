@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <title>Paid Notes Page</title>
+    <style>
+        .container {
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+        }
+        h2{
+        color:#3498db;
+        font-size: 60px;
+        
+        }
+        
+        h1 {
+            color: #3498db;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            width: 10%;
+        }
+        
+        .button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: #e74c3c;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  #8ed9ea;
+        }
+        
+        form {
+        top: 0;
+        right: 0;
+        }
+        .animate-charcter
+        {
+        text-transform: uppercase;
+        background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        font-size: 35px;
+        }
+        
+        @keyframes textclip {
+        to {
+        background-position: 200% center;
+        }
+        }
+        form {
+        
+        padding: 10px;
+        background: #fff;
+        max-width: 500px;
+        width: 2000%;
+        border-radius: 7px;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+        background-color:bisque;
+        align-self: center;
+        }
+        
+        form h2 {
+        font-size: 30px;
+        text-align: center;
+        margin: 0px 0 15px;
+        }
+        
+        form .form-group {
+        margin-bottom: 10px;
+        position: relative;
+        }
+        
+        form label {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 7px;
+        }
+        
+        form input,
+        form select {
+        height: 35px;
+        padding: 5px;
+        width: 100%;
+        font-size: 15px;
+        outline: none;
+        background: #fff;
+        border-radius: 3px;
+        border: 1px solid #bfbfbf;
+        }
+        
+        form input:focus,
+        form select:focus {
+        border-color: #9a9a9a;
+        }
+        
+        form input.error,
+        form select.error {
+        border-color: #f91919;
+        background: #f9f0f1;
+        }
+        
+        form small {
+        font-size: 14px;
+        margin-top: 5px;
+        display: block;
+        color: #f91919;
+        }
+        
+        form .password i {
+        position: absolute;
+        right: 0px;
+        height: 45px;
+        top: 28px;
+        font-size: 13px;
+        line-height: 45px;
+        width: 45px;
+        cursor: pointer;
+        color: #939393;
+        text-align: center;
+        }
+        
+        .submit-btn {
+        margin-top: 30px;
+        }
+        
+        .submit-btn input {
+        color: white;
+        border: none;
+        height: fit-content;
+        font-size: 16px;
+        padding: 13px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 500;
+        text-align: center;
+        background: #1BB295;
+        transition: 0.2s ease;
+        
+        }
+        
+        .submit-btn input:hover {
+        background: #179b81;
+        display: contents;
+        }
+        
+          .main {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+        }
+        .main .card {
+            width: 30%;
+            margin: 20px;
+            border:2px solid black;
+            border-radius:10px;
+            box-shadow: 5px 5px 7px gray;
+            background-color: #f0f0f0;
+        }
+        .main .card img {
+            width: 90%;
+            height: 180px;
+            object-fit: fill;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+        }
+        .main .card .content {
+            padding: 10px;
+        }
+        .main .card .content h3 {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: black;
+        }
+        .main .card .content p {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: gray;
+        }
+        .main .card .content a {
+            display: flexbox;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: white;
+            background-color: green;
+            border-radius:20px;
+        }
+        .main .card .content a:hover {
+            background-color: darkgreen;
+        }
+        .section {
+            margin: 20px;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #333;
+        }
+        .section p {
+            color: #666;
+        }
+        .info-box {
+          width: 40%;
+          padding: 30px;
+          margin:10px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .info-box:hover {
+          background-color: #3498db;
+          color: #fff;
+          transform: translateY(-5px);
+        }
+        .footer {
+            background-color: #0d0c0c;
+            color: rgb(245, 236, 236);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            color: #ccc;
+        }
+
+        .footer-section {
+            background-color: black;
+            flex: 1;
+            color: white;
+        }
+
+        .footer-section h3 {
+            color: #eaeff3;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .footer-section:hover h3 {
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        .section-content {
+            margin-top: 10px;
+
+        }
+
+        .social-icons img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .copyright p a {
+            background-color: black;
+            margin-bottom: 50px;
+            color: white;
+          }
+
+        .footer-container .footer-section .section-content img {
+            height: 50px;
+            width: 140px;
+        }
+
+        .footer-container .footer-section .section-content .social-icons img {
+            height: 30px;
+            width: 20px;
+        }
+
+
+        .live-indicator {
+            display: inline-block;
+            background-color: #e74c3c;
+            /* Live indicator color */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+        }
+
+        nav img {
+            max-width: 180px;
+            height: 80px;
+            display: inline-block;
+            align-items: left;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: skyblue;
+            color: white;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: skyblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+  <nav>
+    <nav>
+        <ul>
+            <div class="navbar" id="myNavbar">
+                <img src="Telphatech.png" alt="TelphaTech Logo" />
+                <li class="dropdown">
+                    <i class="fas fa-home icon"></i><a href="homepage.html">Home </a>
+                </li>
+                <li class="dropdown">
+                    <i class="fas fa-graduation-cap icon"></i><a>Class Mode </a>
+                    <div class="dropdown-content">
+                        <a href="Offline_class.html">Offline Class</a>
+                        <a href="online class.html">Online Class</a>
+                    </div>
+                </li>
+                </li>
+                <li>
+                <li class="dropdown">
+                    <i class="fas fa-video"></i><a>Webinar</a>
+                    <div class="dropdown-content">
+                        <ul>
+                            <a href="live webinar.html">Live Webinar</a>
+                            <a href="upcoming webinar.html">Upcoming Webinar</a>
+                        </ul>
+                    </div>
+                </li>
+                </li>
+                <li>
+                <li class="dropdown"><i class="fas fa-regular fa-user"></i><a href="student corner.html">Student Corner</a>
+                    <div class="dropdown-content">
+                    </div>
+                </li>
+                </li>
+                <li class="dropdown">
+                    <i class="fas fa-solid fa-caret-down"></i><a>More</a>
+                    <div class="dropdown-content">
+                        <ul>
+                            <a href="events.html">Events</a>
+                            <a href="aboutpage.html">About Us</a>
+                            <a href="registration.html">New Registration</a>
+                            <a href="Placementcontaint.html">Placement Section</a>
+                        </ul>
+                    </div>
+                </li>
+                <li><i class="fas fa-solid fa-users"></i><a href="Login.html">Log In</a>  </li>
+                <li><i class="fas fa-solid fa-user-plus"></i><a href="registration.html">New Registration</a>
+                </li>
+                </li>
+                </li>
+    </nav>
+</nav>
+    <div class="container">
+        <marquee><div class="row">
+          <div class="col-md-12 text-center">
+          <h2 class="animate-charcter">Your Purchased Test Series</h2>
+          </div>
+        </div></marquee>
+        <!-- <nav>
+            <ul>
+            <div class="navbar" id="myNavbar">
+                <li class="dropdown">
+                 <a href="student corner.html">Back</a>
+                 <a href="unpaidTest.html">Unpaid</a>
+                </li>
+            </div>
+        </ul>
+        </nav> -->
+        <div class="main">
+          <!-- Your first row of cards here -->
+          <div class="card">
+            <img src="science.jpg" alt="Free">
+            <div class="content">
+              <h3>Science Test</h3>
+              <p>You will get simple and easy solution.... Hurry up!</p>
+              <a href="Paid_page.html"> Access Test</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="english.jpg" alt="Free">
+            <div class="content">
+              <h3>English Test</h3>
+              <p>You will get simple and easy solution.... Hurry up!</p>
+              <a href="Paid_page.html "> Access Test</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="math.jpg" alt="Free">
+            <div class="content">
+              <h3>Maths Test</h3>
+              <p>You will get simple and easy solution.... Hurry up!
+              </p>
+              <a href="Paid_page.html"> Access Test</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <center>
+        <div style="background-color: #0d0c0c;">
+          <footer>
+            <div class="footer-container">
+              <div class="footer-section">
+                <h3>About Us</h3>
+                <div class="section-content">
+                  <label class="logo"><img src="Telphatech.png" width="200px" height="80px"></label>
+                  <div class="social-icons">
+                    <a href="#">
+                      <font color="white"><i class="fab fa-facebook-f"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-twitter"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-instagram"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-linkedin-in"></i></font>
+                    </a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>What We Do</h3>
+                <div class="section-content">
+                  <p>AI/ML Development</p>
+                  <p>Blockchain Development</p>
+                  <p>Android Development</p>
+                  <p>Flutter Development</p>
+                  <p>Digital Marketing</p>
+                  <p>WordPress Development</p>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>What We Offer</h3>
+                <div class="section-content">
+                  <p>MEAN Full Stack Development</p>
+                  <p>Django Development</p>
+                  <p>Java Development</p>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>Contact</h3>
+                <p> <a href="#">
+                    <font color="white"><i class="fas fa-sharp fa-regular fa-phone"></i> +918421835869</font>
+                  </a> </p>
+                <p><a href="#">
+                    <font color="white"><i class="fas fa-regular fa-envelope"></i> telphatech@gmail.com</font>
+                  </a></p>
+                <p><a href="#">
+                    <font color="white"><i class="fas fa-map-marker-alt"></i>Gaurav, Pune</font>
+                  </a></p>
+              </div>
+            </div>
+  
+        <div class="copyright">
+          <p>
+            <font color="white">&copy; 2024 Your Company. All rights reserved. |</font>
+            <a href="">Telphatech.com</a>
+        </div>
+        </p>
+  
+    </footer>
+    </div>
+    </center>
+</body>
+</html>

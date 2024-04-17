@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Student Corner</title>
+    <style>
+        .animate-charcter {
+            text-transform: uppercase;
+            background-image: linear-gradient(-225deg,
+                    #231557 0%,
+                    #44107a 29%,
+                    #ff1361 67%,
+                    #fff800 100%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            display: inline-block;
+            font-size: 25px;
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color:  #8ed9ea; 
+        }
+
+        .header {
+            text-align: center;
+            background-color: #8ed9ea;
+            color: #090909;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-block;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .section {
+            width: 100%;
+            padding: 50px;
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #7fd5ef;
+            border-bottom: 1px solid #618bb5;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .content {
+            flex-grow: 1;
+        }
+
+        h2 {
+            color: rgb(250, 20, 20);
+        }
+
+        p {
+            color:rgb(242, 237, 237);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .paid {
+            background-color: #28a745;
+        }
+
+        .unpaid {
+            background-color: #dc3545;
+        }
+
+        .footer {
+            background-color: #0d0c0c;
+            color: rgb(245, 236, 236);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            color: #ccc;
+        }
+
+        .footer-section {
+            background-color: black;
+            flex: 1;
+            color: white;
+        }
+
+        .footer-section h3 {
+            color: #eaeff3;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .footer-section:hover h3 {
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        .section-content {
+            margin-top: 10px;
+
+        }
+
+        .social-icons img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .copyright p a {
+            background-color: black;
+            margin-bottom: 50px;
+            color: white;
+          }
+
+        .footer-container .footer-section .section-content img {
+            height: 50px;
+            width: 140px;
+        }
+
+        .footer-container .footer-section .section-content .social-icons img {
+            height: 30px;
+            width: 20px;
+        }
+
+
+        .live-indicator {
+            display: inline-block;
+            background-color: #e74c3c;
+            /* Live indicator color */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+        }
+
+        nav img {
+            max-width: 180px;
+            height: 80px;
+            display: inline-block;
+            align-items: left;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: skyblue;
+            color: white;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: skyblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <nav>
+            <ul>
+                <div class="navbar" id="myNavbar">
+                    <img src="Telphatech.png" alt="TelphaTech Logo" />
+                    <li class="dropdown">
+                        <i class="fas fa-home icon"></i><a href="homepage.html">Home </a>
+                    </li>
+                    <li class="dropdown">
+                        <i class="fas fa-graduation-cap icon"></i><a>Class Mode </a>
+                        <div class="dropdown-content">
+                            <a href="Offline_class.html">Offline Class</a>
+                            <a href="online class.html">Online Class</a>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                    <li class="dropdown">
+                        <i class="fas fa-video"></i><a>Webinar</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <a href="live webinar.html">Live Webinar</a>
+                                <a href="upcoming webinar.html">Upcoming Webinar</a>
+                            </ul>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                    <li class="dropdown"><i class="fas fa-regular fa-user"></i><a href="student corner.html">Student
+                            Corner</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    </li>
+                    <li class="dropdown">
+                        <i class="fas fa-solid fa-caret-down"></i><a>More</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <a href="events.html">Events</a>
+                                <a href="aboutpage.html">About Us</a>
+                                <a href="registration.html">New Registration</a>
+                                <a href="Placementcontaint.html">Placement Section</a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                    <li><i class="fas fa-solid fa-users"></i><a href="Login.html">Log In</a> </li>
+                    <li><i class="fas fa-solid fa-user-plus"></i><a href="registration.html">New Registration</a>
+                    </li>
+                    </li>
+                    </li>
+        </nav>
+    </nav>
+    <!-- Header -->
+    <marquee>
+        <div class="header">
+            <h1 class="animate-charcter">Student Corner</h1>
+        </div>
+    </marquee>
+    <!-- Test Section -->
+    <div class="section">
+        <img src="data:image/jpeg;base64,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"
+            alt="Test Paper Image">
+        <div class="content">
+            <h2>Test Section </h2>
+            <h4>We conduct tests on Weekly basis ,Problem solving is the act of defining a problem; determining the cause
+                of the problem; identifying, prioritizing, and selecting alternatives for a solution; and implementing a
+                solution. The problem-solving process. Problem solving resources., Our expert system gives you result
+                within an hour , Plese choose the Type of Test you wanna opt for</h4>
+            <div class="buttons">
+                <a href="paidtest.html" class="button paid">Paid</a>
+                <a href="unpaidTest.html" class="button unpaid">Unpaid</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notes Section -->
+    <div class="section">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ32WHAvWE04NYhtSHessBmgycTASsHz6xnzg&usqp=CAU"
+            alt="Notes Image">
+        <div class="content">
+            <h2>Notes Section </h2>
+            <h4>We conduct tests on Weekly basis ,Problem solving is the act of defining a problem; determining the cause
+                of the problem; identifying, prioritizing, and selecting alternatives for a solution; and implementing a
+                solution. The problem-solving process. Problem solving resources., Our expert system gives you result
+                within an hour , Plese choose the Type of Test you wanna opt for ,Explore our collection of notes and
+                choose your preferred option below:</h4>
+            <div class="buttons">
+                <a href="paid notes subwise.html" class="button paid">Paid</a>
+                <a href="unpaid notes.html" class="button unpaid">Unpaid</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Question Bank Section -->
+    
+    <div class="section">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc3PpM3bbcVX4vZZYJrvrgCU7OgwX7NWsovQ&usqp=CAU"
+            alt="Question Bank Image">
+        <div class="content">
+            <h2>Question Bank Section</h2>
+            <h4>We conduct tests on Weekly basis ,Problem solving is the act of defining a problem; determining the cause
+                of the problem; identifying, prioritizing, and selecting alternatives for a solution; and implementing a
+                solution. The problem-solving process. Problem solving resources., Our expert system gives you result
+                within an hour , Plese choose the Type of Test you wanna opt for ,Access our question bank for practice
+                and choose your preferred option below:</h4>
+            <div class="buttons">
+                <a href="paid question bank.html" class="button paid">Paid</a>
+                <a href="unpaid question bank.html" class="button unpaid">Unpaid</a>
+            </div>
+        </div>
+    </div>
+</div>
+<center>
+    <div style="background-color: #0d0c0c;">
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+            <h3>About Us</h3>
+            <div class="section-content">
+              <label class="logo"><img src="Telphatech.png" width="200px" height="80px"></label>
+              <div class="social-icons">
+                <a href="#">
+                  <font color="white"><i class="fab fa-facebook-f"></i></font>
+                </a>
+                <a href="#">
+                  <font color="white"><i class="fab fa-twitter"></i></font>
+                </a>
+                <a href="#">
+                  <font color="white"><i class="fab fa-instagram"></i></font>
+                </a>
+                <a href="#">
+                  <font color="white"><i class="fab fa-linkedin-in"></i></font>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>What We Do</h3>
+            <div class="section-content">
+              <p>AI/ML Development</p>
+              <p>Blockchain Development</p>
+              <p>Android Development</p>
+              <p>Flutter Development</p>
+              <p>Digital Marketing</p>
+              <p>WordPress Development</p>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>What We Offer</h3>
+            <div class="section-content">
+              <p>MEAN Full Stack Development</p>
+              <p>Django Development</p>
+              <p>Java Development</p>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact</h3>
+            <p> <a href="#">
+                <font color="white"><i class="fas fa-sharp fa-regular fa-phone"></i> +918421835869</font>
+              </a> </p>
+            <p><a href="#">
+                <font color="white"><i class="fas fa-regular fa-envelope"></i> telphatech@gmail.com</font>
+              </a></p>
+            <p><a href="#">
+                <font color="white"><i class="fas fa-map-marker-alt"></i>Gaurav, Pune</font>
+              </a></p>
+          </div>
+        </div>
+
+    <div class="copyright">
+      <p>
+        <font color="white">&copy; 2024 Your Company. All rights reserved. |</font>
+        <a href="">Telphatech.com</a>
+    </div>
+    </p>
+
+</footer>
+</div>
+</center>
+
+</body>
+
+</html>

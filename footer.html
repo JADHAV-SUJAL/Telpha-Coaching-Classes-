@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+      }
+
+      .footer-section {
+        flex: 1;
+        text-align: center;
+        
+      }
+
+      .footer-section h3 {
+        color: #3498db;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.3s ease-in-out;
+        cursor: pointer;
+        text-align: center;
+       
+      }
+
+      .footer-section:hover h3 {
+        border-bottom: 2px solid #e74c3c;
+        text-align: center;
+      }
+
+      .section-content {
+        margin-top: 10px;
+        
+      }
+
+      .social-icons img {
+        width: 40px;
+        margin-right: 10px;
+       
+      }
+
+      .contact-info {
+        text-align: left;
+      }
+      .copywrite p a{
+        color:black;
+      }
+
+     .footer-container .footer-section .section-content img {
+        height: 50px;
+        width: 140px;
+     }
+     .footer-container .footer-section .section-content .social-icons img{
+    height: 30px;
+    width: 20px;
+}
+      
+    </style>
+  </head>
+  <body>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <div class="section-content">
+            <img src="images/Telphatech.png" alt="About Us" />
+            <div class="social-icons">
+              <img src="images/facebook.gif" alt="Facebook" />
+              <img src="images/insta.gif" alt="Instagram" />
+              <img src="images/youtube.png" alt="YouTube" />
+              <img src="images/linkedin.png"LinkedIn" />
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>What We Do</h3>
+          <div class="section-content">
+            <p>AI/ML Development</p>
+            <p>Blockchain Development</p>
+            <p>Android Development</p>
+            <p>Flutter Development</p>
+            <p>Digital Marketing</p>
+            <p>WordPress Development</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>What We Offer</h3>
+          <div class="section-content">
+            <p>MEAN Full Stack Development</p>
+            <p>Django Development</p>
+            <p>Java Development</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <div class="section-content contact-info">
+            <p>Phone: +1234567890</p>
+            <p>Email: Telphatech.com</p>
+            <p>Address: PUNE, City</p>
+          </div>
+         
+        </div>
+      </div>
+      <div class="copywrite"><p>
+        &copy; 2024 Your Company. All rights reserved. |
+        <a href="">Telphatech.com</a>
+      </p></div>
+    </footer>
+  </body>
+</html>

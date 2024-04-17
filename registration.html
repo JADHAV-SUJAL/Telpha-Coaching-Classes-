@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .animate-charcter {
+            text-transform: uppercase;
+            background-image: linear-gradient(-225deg,
+                    #231557 0%,
+                    #44107a 29%,
+                    #ff1361 67%,
+                    #fff800 100%);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            display: inline-block;
+            font-size: 25px;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: contents;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            text-align: center;
+            background:#8ed9ea;
+
+        }
+
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            background: white;
+            padding: 50px;
+            margin:28px;
+            border-radius: 10px;
+            box-shadow: inset 1px 1px 3px 3px rgb(16, 154, 234);
+            
+
+        }
+
+        .form-title {
+            font-size: 26px;
+            font-weight: 600;
+            text-align: center;
+            padding-bottom: 6px;
+            color: black;
+            text-shadow: 2px 2px 2px rgb(225, 234, 239);
+            border-bottom: solid 1px white;
+        }
+
+        .main-user-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .user-input-box:nth-child(2n) {
+            justify-content: end;
+        }
+
+        .user-input-box {
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            padding-bottom: 15px;
+        }
+
+        .user-input-box label {
+            width: 95%;
+            color: black;
+            font-size: 20px;
+            font-weight: 400;
+            margin: 5px 0;
+        }
+
+        .user-input-box input {
+            height: 40px;
+            width: 95%;
+            border-radius: 7px;
+            outline: none;
+            border: 1px solid grey;
+            padding: 0 10px;
+        }
+
+        .gender-title {
+            color: black;
+            font-size: 24px;
+            font-weight: 600;
+            border-bottom: 1px solid white;
+        }
+
+        .gender-category {
+            margin: 15px 0;
+            color: black;
+        }
+
+        .gender-category label {
+            padding: 0 20px 0 5px;
+        }
+
+        .gender-category label,
+        .gender-category input,
+        .form-submit-btn input {
+            cursor: pointer;
+        }
+
+        .form-submit-btn {
+            margin-top: 40px;
+        }
+
+        .form-submit-btn input {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            color: rgb(209, 209, 209);
+            background: rgb(16, 154, 234);
+        }
+
+        .form-submit-btn input:hover {
+            background: rgb(9, 203, 229);
+            color: rgb(17, 131, 224);
+        }
+
+        @media(max-width: 600px) {
+            .container {
+                min-width: 280px;
+            }
+
+            .user-input-box {
+                margin-bottom: 12px;
+                width: 100%;
+            }
+
+            .user-input-box:nth-child(2n) {
+                justify-content: space-between;
+            }
+
+            .gender-category {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .main-user-info {
+                max-height: 380px;
+                overflow: auto;
+            }
+
+            .main-user-info::-webkit-scrollbar {
+                width: 0;
+            }
+        }
+
+        .footer {
+            background-color: #0d0c0c;
+            color: rgb(245, 236, 236);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            color: #ccc;
+        }
+
+        .footer-section {
+            background-color: black;
+            flex: 1;
+            color: white;
+        }
+
+        .footer-section h3 {
+            color: #eaeff3;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .footer-section:hover h3 {
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        .section-content {
+            margin-top: 10px;
+
+        }
+
+        .social-icons img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .copyright p a {
+            background-color: black;
+            margin-bottom: 50px;
+            color: white;
+          }
+
+        .footer-container .footer-section .section-content img {
+            height: 50px;
+            width: 140px;
+        }
+
+        .footer-container .footer-section .section-content .social-icons img {
+            height: 30px;
+            width: 20px;
+        }
+
+
+        .live-indicator {
+            display: inline-block;
+            background-color: #e74c3c;
+            /* Live indicator color */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+        }
+
+        nav img {
+            max-width: 180px;
+            height: 80px;
+            display: inline-block;
+            align-items: left;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: skyblue;
+            color: white;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: skyblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <nav>
+            <ul>
+                <div class="navbar" id="myNavbar">
+                    <img src="Telphatech.png" alt="TelphaTech Logo" />
+                    <li class="dropdown">
+                        <i class="fas fa-home icon"></i><a href="homepage.html">Home </a>
+                    </li>
+                    <li class="dropdown">
+                        <i class="fas fa-graduation-cap icon"></i><a>Class Mode </a>
+                        <div class="dropdown-content">
+                            <a href="Offline_class.html">Offline Class</a>
+                            <a href="online class.html">Online Class</a>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                    <li class="dropdown">
+                        <i class="fas fa-video"></i><a>Webinar</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <a href="live webinar.html">Live Webinar</a>
+                                <a href="upcoming webinar.html">Upcoming Webinar</a>
+                            </ul>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                    <li class="dropdown"><i class="fas fa-regular fa-user"></i><a href="student corner.html">Student
+                            Corner</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    </li>
+                    <li class="dropdown">
+                        <i class="fas fa-solid fa-caret-down"></i><a>More</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <a href="events.html">Events</a>
+                                <a href="aboutpage.html">About Us</a>
+                                <a href="registration.html">New Registration</a>
+                                <a href="Placementcontaint.html">Placement Section</a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><i class="fas fa-solid fa-users"></i><a href="Login.html">Log In</a>
+                        <li><i class="fas fa-solid fa-user-plus"></i><a href="registration.html">New Registration</a>
+                    </li>
+                    </li>
+        </nav>
+    </nav>
+    <div style="background-color: #8ed9ea;">
+
+    <center>
+        <div class="container">
+            <h1 class="form-title">Registration</h1>
+            <form action="#">
+                <div class="main-user-info">
+                    <div class="user-input-box">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter Full Name" />
+                    </div>
+                    <div class="user-input-box">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter Username" />
+                    </div>
+                    <div class="user-input-box">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter Email" />
+                    </div>
+                    <div class="user-input-box">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter Phone Number" />
+                    </div>
+                    <div class="user-input-box">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter Password" />
+                    </div>
+                    <div class="user-input-box">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword"
+                            placeholder="Confirm Password" />
+                    </div>
+                </div>
+                <div class="gender-details-box">
+                    <span class="gender-title">Gender</span>
+                    <div class="gender-category">
+                        <input type="radio" name="gender" id="male">
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                <div class="policy">
+                    <input type="checkbox">
+                    <h3>I accept all terms & condition</h3>
+                </div>
+                <div class="form-submit-btn">
+                    <input type="submit" value="Register">
+                </div>
+                <br>
+                <div class="text">
+                    <h3>Already have an account? <a href="Login.html">Sign In now</a></h3>
+                </div>
+            </form>
+        </div>
+    </center>
+    <br><br>
+    <center>
+        <div style="background-color: #0d0c0c;">
+          <footer>
+            <div class="footer-container">
+              <div class="footer-section">
+                <h3>About Us</h3>
+                <div class="section-content">
+                  <label class="logo"><img src="Telphatech.png" width="200px" height="80px"></label>
+                  <div class="social-icons">
+                    <a href="#">
+                      <font color="white"><i class="fab fa-facebook-f"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-twitter"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-instagram"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-linkedin-in"></i></font>
+                    </a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>What We Do</h3>
+                <div class="section-content">
+                  <p>AI/ML Development</p>
+                  <p>Blockchain Development</p>
+                  <p>Android Development</p>
+                  <p>Flutter Development</p>
+                  <p>Digital Marketing</p>
+                  <p>WordPress Development</p>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>What We Offer</h3>
+                <div class="section-content">
+                  <p>MEAN Full Stack Development</p>
+                  <p>Django Development</p>
+                  <p>Java Development</p>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>Contact</h3>
+                <p> <a href="#">
+                    <font color="white"><i class="fas fa-sharp fa-regular fa-phone"></i> +918421835869</font>
+                  </a> </p>
+                <p><a href="#">
+                    <font color="white"><i class="fas fa-regular fa-envelope"></i> telphatech@gmail.com</font>
+                  </a></p>
+                <p><a href="#">
+                    <font color="white"><i class="fas fa-map-marker-alt"></i>Gaurav, Pune</font>
+                  </a></p>
+              </div>
+            </div>
+  
+        <div class="copyright">
+          <p>
+            <font color="white">&copy; 2024 Your Company. All rights reserved. |</font>
+            <a href="">Telphatech.com</a>
+        </div>
+        </p>
+  
+    </footer>
+    </div>
+    </center>
+</body>
+
+</html>

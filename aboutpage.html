@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>About Us - Telphatech</title>
+</head>
+<style>
+    body {
+        background-color: rgb(244, 239, 232);
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color:  #8ed9ea;
+    }
+    .about-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid black;
+        border-radius: 30px;
+    }
+
+    .about-image {
+        width: 35%;
+        overflow: hidden;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-image img {
+        padding-top: 250px;
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 30px;
+        transition: transform 0.3s;
+    }
+
+    .about-image:hover img {
+        transform: scale(1.1);
+    }
+
+    .about-content {
+        width: 60%;
+    }
+
+    h1 {
+        color: aqua;
+    }
+
+    .about-content p {
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .about-container:hover .about-content {
+        background-color: #ece2e2;
+        transition: background-color 1s;
+    }
+
+    .about h1 {
+        color: #eaeff2;
+        font-size: 60px;
+        text-align: center;
+        margin-top: 70px;
+
+    }
+
+    .about h2 {
+        color: black;
+        text-align: center;
+    }
+
+    /* 90000000000000000000000000  ABOUT PAGE 00000000000000000000000000000000000999999999 */
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .info-box {
+        width: 50%;
+        padding: 50px;
+        margin: 10px;
+        background-color: #fff;
+        border-radius: 80px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .info-box:hover {
+        background-color: #f4f5f6;
+        color: #fff;
+        transform: translateY(-5px);
+    }
+
+    .h2 {
+        color: aqua;
+        margin-bottom: 10px;
+    }
+
+    .info-box p {
+        line-height: 1.5;
+        margin-bottom: 10;
+        margin-left: 10;
+        margin-right: 20;
+
+    }
+
+    .about-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid black;
+        border-radius: 30px;
+    }
+
+    .about-image {
+        width: 35%;
+        overflow: hidden;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-image img {
+        padding-top: 250px;
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 30px;
+        transition: transform 0.3s;
+    }
+
+    .about-image:hover img {
+        transform: scale(1.1);
+    }
+
+    .about-content {
+        width: 60%;
+    }
+
+    h1 {
+        color: #3498db;
+    }
+
+    .about-content p {
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .about-container:hover .about-content {
+        background-color: #c9bcbc;
+        transition: background-color 1s;
+    }
+
+    .about h1 {
+        display: inline-block;
+            background-color: #e74c3c;
+            /* Live indicator color */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+
+    }
+
+    .about h2 {
+        color: black;
+        text-align: center;
+    }
+
+    /* 90000000000000000000000000  ABOUT PAGE 00000000000000000000000000000000000999999999 */
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .info-box {
+        width: 30%;
+        padding: 20px;
+        margin: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .info-box:hover {
+        background-color: #e6ecf0;
+        color: #fff;
+        transform: translateY(-5px);
+    }
+
+    h2 {
+        color: #3498db;
+        margin-bottom: 10px;
+    }
+
+    .info-box p {
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    #features {
+        background-color:  #8ed9ea;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .feature {
+        width: 100%;
+        max-width: 500px;
+        /* Adjust the max-width as needed */
+        margin-bottom: 30px;
+    }
+
+    .feature-description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .feature img {
+        margin-bottom: 20px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    #description {
+        padding: 20px;
+        text-align: center;
+    }
+
+
+    @media screen and (min-width: 768px) {
+        .feature {
+            width: 48%;
+        }
+    }
+
+    @media screen and (min-width: 992px) {
+        #features {
+            padding: 40px;
+        }
+    }
+
+    .footer {
+        background-color: #0d0c0c;
+        color: rgb(245, 236, 236);
+        padding: 20px;
+        text-align: center;
+    }
+  
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+        color: #ccc;
+    }
+  
+    .footer-section {
+        background-color: black;
+        flex: 1;
+        color: white;
+    }
+  
+    .footer-section h3 {
+        color: #eaeff3;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.3s ease-in-out;
+        cursor: pointer;
+    }
+  
+    .footer-section:hover h3 {
+        border-bottom: 2px solid #e74c3c;
+    }
+  
+    .section-content {
+        margin-top: 10px;
+  
+    }
+  
+    .social-icons img {
+        width: 20px;
+        margin-right: 10px;
+    }
+  
+    .contact-info {
+        text-align: left;
+    }
+  
+    .copyright p a {
+        background-color: black;
+        margin-bottom: 50px;
+        color: white;
+      }
+  
+    .footer-container .footer-section .section-content img {
+        height: 50px;
+        width: 140px;
+    }
+  
+    .footer-container .footer-section .section-content .social-icons img {
+        height: 30px;
+        width: 20px;
+    }
+  
+  
+    .live-indicator {
+        display: inline-block;
+        background-color: #e74c3c;
+        /* Live indicator color */
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+  
+    nav {
+        background-color: white;
+        padding: 15px 20px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 20px;
+    }
+  
+    nav img {
+        max-width: 180px;
+        height: 80px;
+        display: inline-block;
+        align-items: left;
+    }
+  
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+  
+    ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+  
+    ul li a {
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+  
+    ul li a:hover {
+        background-color: skyblue;
+        color: white;
+    }
+  
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+  
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+  
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+  
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s;
+    }
+  
+    .dropdown-content a:hover {
+        background-color: skyblue;
+        color: white;
+    }
+</style>
+
+<body>
+    <nav>
+        <nav>
+            <ul>
+                <div class="navbar" id="myNavbar">
+                    <img src="Telphatech.png" alt="TelphaTech Logo" />
+                    <li class="dropdown">
+                        <i class="fas fa-home icon"></i><a href="homepage.html">Home </a>
+                    </li>
+                    <li class="dropdown">
+                        <i class="fas fa-graduation-cap icon"></i><a>Class Mode </a>
+                        <div class="dropdown-content">
+                            <a href="Offline_class.html">Offline Class</a>
+                            <a href="online class.html">Online Class</a>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                    <li class="dropdown">
+                        <i class="fas fa-video"></i><a>Webinar</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <a href="live webinar.html">Live Webinar</a>
+                                <a href="upcoming webinar.html">Upcoming Webinar</a>
+                            </ul>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                    <li class="dropdown"><i class="fas fa-regular fa-user"></i><a href="student corner.html">Student Corner</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    </li>
+                    <li class="dropdown">
+                        <i class="fas fa-solid fa-caret-down"></i><a>More</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <a href="events.html">Events</a>
+                                <a href="aboutpage.html">About Us</a>
+                                <a href="registration.html">New Registration</a>
+                                <a href="Placementcontaint.html">Placement Section</a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><i class="fas fa-solid fa-users"></i><a href="Login.html">Log In</a>
+                        <li><i class="fas fa-solid fa-user-plus"></i><a href="registration.html">New Registration</a>
+                    </li>
+                    </li>
+        </nav>
+    </nav>
+    <div class="about">
+       <marquee><h1>ABOUT PAGE</h1></marquee>
+        <h2>OUR BACKGROUND AND ACHEIVEMENTS</h2>
+    </div>
+    <div class="about-container">
+        <div class="about-image">
+            <img src="Telphatech.png" alt="Telphatech Image">
+        </div>
+        <div class="about-content">
+          <h1>Welcome to TelphaCoaching Classes</h1>
+            <p>A software company dedicated to empowering businesses with cutting-edge technology. Our team of
+                experienced developers and designers are passionate about building innovative software solutions that
+                solve real-world problems and drive business growth.</p>
+            <p>Founded in 2023, our company has been on a mission to revolutionize the way businesses operate in the
+                digital age. We believe that technology should be accessible, intuitive, and user-friendly, and we work
+                tirelessly to create solutions that reflect those values.</p>
+            <p>At Telphatech, we take a human-centered approach to software development, prioritizing the needs of our
+                users and customers above all else. Whether you’re a small startup or a large enterprise, we’re
+                committed to working closely with you to understand your unique challenges and develop custom software
+                solutions that help you achieve your goals.</p>
+            <p>We’re not just another software company. We’re a team of innovators, disruptors, and problem-solvers, on
+                a mission to change the way businesses interact with technology.</p>
+            <p>We specialize in Services and Products, with a proven track record of delivering exceptional results for
+                our clients. But more than that, we’re passionate about making a difference through technology, and
+                we’re always pushing the boundaries of what’s possible.</p>
+            <p>Thank you for considering Telphatech for your software needs. We look forward to the opportunity to work
+                with you and help you achieve your business goals.</p>
+        </div>
+    </div>
+    <header>
+    <center><h1> Features Of Offline Coaching Classes</h1></center>
+    </header>
+
+    <section id="features">
+        <div class="feature">
+            <h2>Interactive Classes</h2>
+            <div class="feature-description">
+                <img src="interactive_classes.jpg" alt="Interactive Classes Image">
+                <p>Join our engaging and interactive classes where students actively participate and learn through
+                    discussions and activities.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <h2>Experienced Instructors</h2>
+            <div class="feature-description">
+                <img src="experienced_instructors.jpg" alt="Experienced Instructors Image">
+                <p>Learn from experienced instructors who bring a wealth of knowledge and practical insights to the
+                    classroom.</p>
+            </div>
+        </div>
+
+        <div class="feature">
+            <h2>Personalized Learning</h2>
+            <div class="feature-description">
+                <img src="personalized_learning.jpg" alt="Experienced Instructors Image">
+                <p>Experience personalized learning plans tailored to your individual needs, ensuring a customized
+                    educational journey.</p>
+            </div>
+        </div>
+
+
+        <div class="feature">
+            <h2>Exam Preparation Support</h2>
+            <div class="feature-description">
+                <img src="exam_preparation.jpg" alt="Experienced Instructors Image">
+                <p>Receive comprehensive support for exam preparation, including study materials, practice tests, and
+                    guidance from expert tutors.</p>
+            </div>
+        </div>
+
+        <!-- Add more features with the same structure as above -->
+
+    </section>
+
+    <div class="container">
+        <div class="info-box" id="owner-info">
+            <h2>Class Owner Information</h2>
+            <p>Owner Name: Dr.Narendra Jadhav Sir </p>
+            <p>Email: narendra@gmail.com</p>
+            <p>Phone: +1234567890
+            </p>
+        </div>
+
+        <div class="info-box" id="goals-info">
+            <h2>Class Goals</h2>
+            <p>Lorem ipsum dolor sit amet,</p>
+            <p>consectetur adipiscing elit.</p>
+            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+        <div class="info-box" id="mission-vision-info">
+            <h2>Mission and Vision</h2>
+            <p><strong>Mission:</strong> To provide high-quality education and support for every student's success.</p>
+            <p><strong>Vision:</strong> To be a leading educational institution fostering excellence and innovation.</p>
+        </div>
+
+        <div class="info-box" id="contact-info">
+            <h1>CONTACT US</h1>
+            <p>If you have any query related to <b>Telphatech</b>
+            <p>including projects or general query feel to</p>
+            <p>contact me by felling the cotact from or drop me an email</b></p>
+            <p><b>E-Mail : </b>telphatech@gmail.com</p>
+        </div>
+    </div>
+    <center>
+        <div style="background-color: #0d0c0c;">
+          <footer>
+            <div class="footer-container">
+              <div class="footer-section">
+                <h3>About Us</h3>
+                <div class="section-content">
+                  <label class="logo"><img src="Telphatech.png" width="200px" height="80px"></label>
+                  <div class="social-icons">
+                    <a href="#">
+                      <font color="white"><i class="fab fa-facebook-f"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-twitter"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-instagram"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-linkedin-in"></i></font>
+                    </a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>What We Do</h3>
+                <div class="section-content">
+                  <p>AI/ML Development</p>
+                  <p>Blockchain Development</p>
+                  <p>Android Development</p>
+                  <p>Flutter Development</p>
+                  <p>Digital Marketing</p>
+                  <p>WordPress Development</p>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>What We Offer</h3>
+                <div class="section-content">
+                  <p>MEAN Full Stack Development</p>
+                  <p>Django Development</p>
+                  <p>Java Development</p>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>Contact</h3>
+                <p> <a href="#">
+                    <font color="white"><i class="fas fa-sharp fa-regular fa-phone"></i> +918421835869</font>
+                  </a> </p>
+                <p><a href="#">
+                    <font color="white"><i class="fas fa-regular fa-envelope"></i> telphatech@gmail.com</font>
+                  </a></p>
+                <p><a href="#">
+                    <font color="white"><i class="fas fa-map-marker-alt"></i>Gaurav, Pune</font>
+                  </a></p>
+              </div>
+            </div>
+  
+        <div class="copyright">
+          <p>
+            <font color="white">&copy; 2024 Your Company. All rights reserved. |</font>
+            <a href="">Telphatech.com</a>
+        </div>
+        </p>
+  
+    </footer>
+    </div>
+    </center>
+</body>
+
+</html>

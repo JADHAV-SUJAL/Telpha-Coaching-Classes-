@@ -1,0 +1,315 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Live Video Playlist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:  #8ed9ea;
+    }
+
+    header {
+        display: inline-block;
+        background-color: #e74c3c;
+        /* Live indicator color */
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    #playlist-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    #video-playlist {
+      list-style: none;
+      padding: 0;
+    }
+
+    #video-playlist li {
+      margin-bottom: 10px;
+    }
+
+    #video-playlist a {
+      display: block;
+      padding: 10px;
+      background-color: #b10e0e;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    #video-playlist a:hover {
+      background-color: #0a0b22;
+    }
+    .footer {
+        background-color: #0d0c0c;
+        color: rgb(245, 236, 236);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+    color: #ccc;
+    }
+
+    .footer-section {
+        background-color: black;
+        flex: 1;
+        font-color:white ;
+    }
+
+    .footer-section h3 {
+        color: #eaeff3;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .footer-section:hover h3 {
+        border-bottom: 2px solid #e74c3c;
+    }
+
+    .section-content {
+        margin-top: 10px;
+
+    }
+
+    .social-icons img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    .contact-info {
+        text-align: left;
+    }
+
+    .copywrite p a {
+        color: rgb(14, 13, 13);
+    }
+
+    .footer-container .footer-section .section-content img {
+        height: 50px;
+        width: 140px;
+    }
+
+    .footer-container .footer-section .section-content .social-icons img {
+        height: 30px;
+        width: 20px;
+    }
+
+
+    .live-indicator {
+        display: inline-block;
+        background-color: #e74c3c;
+        /* Live indicator color */
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        background-color: white;
+        padding: 15px 20px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 21px;
+    }
+
+    nav img {
+        max-width: 180px;
+        height: 80px;
+        display: inline-block;
+        align-items: left;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+
+    ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    ul li a:hover {
+        background-color: skyblue;
+        color: white;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    .dropdown-content a:hover {
+        background-color: skyblue;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+
+    <nav>
+        <nav>
+            <ul>
+                <div class="navbar" id="myNavbar">
+                    <img src="Telphatech.png" alt="TelphaTech Logo" />
+                    <li class="dropdown">
+                        <i class="fas fa-home icon"></i><a href="homepage.html">Home </a>
+                    </li>
+                    <li class="dropdown">
+                        <i class="fas fa-graduation-cap icon"></i><a>Class Mode </a>
+                        <div class="dropdown-content">
+                            <a href="Offline_class.html">Offline Class</a>
+                            <a href="online class.html">Online Class</a>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                    <li class="dropdown">
+                        <i class="fas fa-video"></i><a>Webinar</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <a href="live webinar.html">Live Webinar</a>
+                                <a href="upcoming webinar.html">Upcoming Webinar</a>
+                            </ul>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                    <li class="dropdown"><i class="fas fa-regular fa-user"></i><a href="student corner.html">Student Corner</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    </li>
+                    <li class="dropdown">
+                        <i class="fas fa-solid fa-caret-down"></i><a>More</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <a href="events.html">Events</a>
+                                <a href="aboutpage.html">About Us</a>
+                                <a href="registration.html">New Registration</a>
+                                <a href="Placementcontaint.html">Placement Section</a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><i class="fas fa-solid fa-users"></i><a href="Login.html">Log In</a>
+                        <li><i class="fas fa-solid fa-user-plus"></i><a href="registration.html">New Registration</a>
+                    </li>
+                    </li>
+        </nav>
+    </nav>
+    <marquee><header>
+<h1>Recorded Video Playlist</h1>
+</header></marquee>
+
+<div id="playlist-container">
+  <ul id="video-playlist">
+    <li><a href="video1.mp4">Video 1</a></li>
+    <li><a href="video2.mp4">Video 2</a></li>
+    <li><a href="https://youtu.be/bT70Qqgn-qY?si=3OwOJUMfm17GI9k4">How to start a code</a></li>
+    <!-- Add more video items as needed -->
+  </ul>
+</div>
+<center>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <div class="section-content">
+                    <label class="logo"><img src="Telphatech.png" width="200px" height="80px"></label>
+                    <div class="social-icons">
+                      <a href="#"><font color="white"><i class="fab fa-facebook-f"></i></font></a>
+                            <a href="#"><font color="white"><i class="fab fa-twitter"></i></font></a>
+                            <a href="#"><font color="white"><i class="fab fa-instagram"></i></font></a>
+                            <a href="#"><font color="white"><i class="fab fa-linkedin-in"></i></font></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>What We Do</h3>
+                <div class="section-content">
+                    <p>AI/ML Development</p>
+                    <p>Blockchain Development</p>
+                    <p>Android Development</p>
+                    <p>Flutter Development</p>
+                    <p>Digital Marketing</p>
+                    <p>WordPress Development</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>What We Offer</h3>
+                <div class="section-content">
+                    <p>MEAN Full Stack Development</p>
+                    <p>Django Development</p>
+                    <p>Java Development</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p> <a href="#"><font color="white"><i class="fas fa-sharp fa-regular fa-phone"></i> +918421835869</font></a> </p>
+                <p><a href="#"><font color="white"><i class="fas fa-regular fa-envelope"></i> telphatech@gmail.com</font></a></p>
+                <p><a href="#"><font color="white"><i class="fas fa-map-marker-alt"></i>Gaurav, Pune</font></a></p>
+            </div>
+        </div>
+        </div>
+        <div class="copywrite">
+            <p>
+                <div style="background-color: #f5f0f0;">&copy; 2024 Your Company. All rights reserved. |
+                    <a href="">Telphatech.com</a></div>
+            </p>
+        </div>
+
+    </footer>
+</center>
+</body>
+</html>

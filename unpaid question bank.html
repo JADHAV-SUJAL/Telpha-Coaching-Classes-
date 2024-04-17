@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Free Question Papers</title>
+    <style>
+        .animate-charcter
+        {
+        text-transform: uppercase;
+        background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        font-size: 35px;
+        }
+        
+        @keyframes textclip {
+        to {
+        background-position: 200% center;
+        }
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8ed9ea; /* Light Grayish Blue Background */
+        }
+
+        header {
+            background-color: #c6edf7; /* Blue Header */
+            color: #d23939;
+            padding: 1em;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #c6edf7;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+        p{
+          font-weight: 600;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .question-paper {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #cf3030; /* Border Color */
+            border-radius: 8px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #2ecc71; /* Green Download Button */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #27ae60; /* Darker Green on Hover */
+        }
+        nav {
+            background-color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: x-large;
+        }
+
+        nav img {
+            max-width: 280px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: skyblue;
+            color: white;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: skyblue;
+            color: white;
+        }
+
+        .footer {
+            background-color: #0d0c0c;
+            color: rgb(245, 236, 236);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            color: #ccc;
+        }
+
+        .footer-section {
+            background-color: black;
+            flex: 1;
+            color: white;
+        }
+
+        .footer-section h3 {
+            color: #eaeff3;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .footer-section:hover h3 {
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        .section-content {
+            margin-top: 10px;
+
+        }
+
+        .social-icons img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .contact-info {
+            text-align: left;
+        }
+
+        .copyright p a {
+            background-color: black;
+            margin-bottom: 50px;
+            color: white;
+          }
+
+        .footer-container .footer-section .section-content img {
+            height: 50px;
+            width: 140px;
+        }
+
+        .footer-container .footer-section .section-content .social-icons img {
+            height: 30px;
+            width: 20px;
+        }
+
+
+        .live-indicator {
+            display: inline-block;
+            background-color: #e74c3c;
+            /* Live indicator color */
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+        }
+
+        nav img {
+            max-width: 180px;
+            height: 80px;
+            display: inline-block;
+            align-items: left;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+        }
+
+        ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        ul li a:hover {
+            background-color: skyblue;
+            color: white;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: skyblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <nav>
+            <ul>
+                <div class="navbar" id="myNavbar">
+                    <img src="Telphatech.png" alt="TelphaTech Logo" />
+                    <li class="dropdown">
+                        <i class="fas fa-home icon"></i><a href="homepage.html">Home </a>
+                    </li>
+                    <li class="dropdown">
+                        <i class="fas fa-graduation-cap icon"></i><a>Class Mode </a>
+                        <div class="dropdown-content">
+                            <a href="Offline_class.html">Offline Class</a>
+                            <a href="online class.html">Online Class</a>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                    <li class="dropdown">
+                        <i class="fas fa-video"></i><a>Webinar</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <a href="live webinar.html">Live Webinar</a>
+                                <a href="upcoming webinar.html">Upcoming Webinar</a>
+                            </ul>
+                        </div>
+                    </li>
+                    </li>
+                    <li>
+                    <li class="dropdown"><i class="fas fa-regular fa-user"></i><a href="student corner.html">Student
+                            Corner</a>
+                        <div class="dropdown-content">
+                        </div>
+                    </li>
+                    </li>
+                    <li class="dropdown">
+                        <i class="fas fa-solid fa-caret-down"></i><a>More</a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <a href="events.html">Events</a>
+                                <a href="aboutpage.html">About Us</a>
+                                <a href="registration.html">New Registration</a>
+                                <a href="Placementcontaint.html">Placement Section</a>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><i class="fas fa-solid fa-users"></i><a href="Login.html">Log In</a>
+                        <li><i class="fas fa-solid fa-user-plus"></i><a href="registration.html">New Registration</a>
+                    </li>
+                    </li>
+        </nav>
+    </nav>
+    <header>
+       <marquee><h2 class="animate-charcter">Free Question Papers</h2></marquee>
+    </header>
+    <!-- <nav>
+        <ul>
+        <div class="navbar" id="myNavbar">
+            <li class="dropdown">
+             <a href="student corner.html">Back</a>
+             <a href="paidtest.html">Paid</a>
+            </li>
+        </div>
+    </ul>
+    </nav> -->
+
+    <section>
+        <div class="question-paper">
+            <h2>HTML Question Paper</h2>
+            <p>HTML question paper: Download and solve HTML-related questions to enhance your web development skills.</p>
+            <a href="path/to/HTML_question_paper.pdf" class="download-btn">Download</a>
+        </div>
+
+        <div class="question-paper">
+            <h2>CSS Question Paper</h2>
+            <p>CSS question paper: Enhance your styling skills with this downloadable question paper covering various aspects of Cascading Style Sheets.</p>
+            <a href="path/to/CSS_question_paper.pdf" class="download-btn">Download</a>
+        </div>
+
+        <div class="question-paper">
+            <h2>Javascript Question Paper</h2>
+            <p>JavaScript question paper: Sharpen your programming proficiency with this downloadable set of JavaScript questions covering key concepts and coding exercises.</p>
+            <a href="path/to/javascript_question_paper.pdf" class="download-btn">Download</a>
+        </div>
+
+        <div class="question-paper">
+            <h2>Java Question Paper</h2>
+            <p>Java question paper: Strengthen your Java programming skills with this downloadable set of questions encompassing core Java concepts and application scenarios.</p>
+            <a href="path/to/java_question_paper.pdf" class="download-btn">Download</a>
+        </div>
+    </section>
+    <center>
+        <div style="background-color: #0d0c0c;">
+          <footer>
+            <div class="footer-container">
+              <div class="footer-section">
+                <h3>About Us</h3>
+                <div class="section-content">
+                  <label class="logo"><img src="Telphatech.png" width="200px" height="80px"></label>
+                  <div class="social-icons">
+                    <a href="#">
+                      <font color="white"><i class="fab fa-facebook-f"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-twitter"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-instagram"></i></font>
+                    </a>
+                    <a href="#">
+                      <font color="white"><i class="fab fa-linkedin-in"></i></font>
+                    </a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>What We Do</h3>
+                <div class="section-content">
+                  <p>AI/ML Development</p>
+                  <p>Blockchain Development</p>
+                  <p>Android Development</p>
+                  <p>Flutter Development</p>
+                  <p>Digital Marketing</p>
+                  <p>WordPress Development</p>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>What We Offer</h3>
+                <div class="section-content">
+                  <p>MEAN Full Stack Development</p>
+                  <p>Django Development</p>
+                  <p>Java Development</p>
+                </div>
+              </div>
+  
+              <div class="footer-section">
+                <h3>Contact</h3>
+                <p> <a href="#">
+                    <font color="white"><i class="fas fa-sharp fa-regular fa-phone"></i> +918421835869</font>
+                  </a> </p>
+                <p><a href="#">
+                    <font color="white"><i class="fas fa-regular fa-envelope"></i> telphatech@gmail.com</font>
+                  </a></p>
+                <p><a href="#">
+                    <font color="white"><i class="fas fa-map-marker-alt"></i>Gaurav, Pune</font>
+                  </a></p>
+              </div>
+            </div>
+  
+        <div class="copyright">
+          <p>
+            <font color="white">&copy; 2024 Your Company. All rights reserved. |</font>
+            <a href="">Telphatech.com</a>
+        </div>
+        </p>
+  
+    </footer>
+    </div>
+    </center>
+</body>
+
+</html>

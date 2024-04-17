@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unpaid Question Papers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+        section {
+            margin-top: 20px;
+        }
+        .paper-link {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unpaid Question Papers</h1>
+        <p>Download the question papers in PDF format.</p>
+    </header>
+
+    <section>
+        <a class="paper-link" href="/path/to/paper1.pdf" download>Question Paper 1</a>
+        <a class="paper-link" href="/path/to/paper2.pdf" download>Question Paper 2</a>
+        <!-- Add more links as needed -->
+    </section>
+</body>
+</html>
